@@ -27,7 +27,16 @@ Add the following to your **application/config/vimeo.php** file:
 ## Usage
 
 	$vimeo = IoC::resolve('vimeo-api');
-	$video_id = $vimeo->upload('PATH_TO_VIDEO_FILE');
+	
+    try {
+        $activity = $vimeo->call('vimeo.activity.userDid');
+        
+        print_r($activity);
+    }
+    catch (VimeoAPIException $e) {
+        echo "Encountered an API error -- code {$e->getCode()} - {$e->getMessage()}";
+    }
+	
 		
 Fork of https://github.com/vimeo/vimeo-php-lib
 

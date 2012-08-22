@@ -8,16 +8,15 @@
  */
 
 Autoloader::map(array(
-	'Facebook' => Bundle::path('vimeo-api').'vimeo/vimeo.php',
+	'phpVimeo' => Bundle::path('vimeo-api').'vimeo/vimeo.php',
 ));
 
 Laravel\IoC::singleton('vimeo-api', function()
 {
-    
-    $consumer_key 		= Config::get('vimeo-api::vimeo.consumer_key');
-    $consumer_secret	= Config::get('vimeo-api::vimeo.consumer_secret');
-    $access_token		= Config::get('vimeo-api::vimeo.access_token');
-    $access_token_secret= Config::get('vimeo-api::vimeo.access_token_secret');            
+    $consumer_key 		= Config::get('vimeo.consumer_key');
+    $consumer_secret	= Config::get('vimeo.consumer_secret');
+    $access_token		= Config::get('vimeo.access_token');
+    $access_token_secret= Config::get('vimeo.access_token_secret');            
 
 	return new phpVimeo($consumer_key, $consumer_secret, $access_token, $access_token_secret);
 });
