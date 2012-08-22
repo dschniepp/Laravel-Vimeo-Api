@@ -17,9 +17,12 @@ Add the following to your **application/bundles.php** file:
 Add the following to your **application/config/vimeo.php** file:
 
 	return array(
-		'app_id' => '',
-		'secret' => '',
+		'consumer_key' 			=> '', 
+		'consumer_secret'		=> '',  
+		'access_token'			=> '', 
+		'access_token_secret'		=> '',
 	);
+
 	
 ## Usage
 
