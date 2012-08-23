@@ -14,13 +14,14 @@ Add the following to your **application/bundles.php** file:
 
 ## Configuration
 
-Add the following to your **application/config/vimeo.php** file:
+
+Move the **config/vimeo.php** to the **application** folder and add the following to your **application/config/vimeo.php** file:
 
 	return array(
-		'consumer_key' 			=> '', 
-		'consumer_secret'		=> '',  
-		'access_token'			=> '', 
-		'access_token_secret'		=> '',
+		'consumer_key' 			=> 'YOUR CONSUMER KEY', 
+		'consumer_secret'		=> 'YOUR CONSUMER SECRET',  
+		'access_token'			=> 'YOUR ACCESS TOKEN', 
+		'access_token_secret'		=> 'YOUR ACCESS TOKEN SECRET',
 	);
 
 	
